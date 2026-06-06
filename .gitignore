@@ -12,3 +12,12 @@ env/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Data and Models
+__pycache__/
+*.npy
+*.keras
+*.csv
+*.pkl
+data/
+models/

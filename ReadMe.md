@@ -1,6 +1,48 @@
 # Diabetes Classification ANN Project
+**Date Started**: 2026-06-06
 
-This is the append-only development ledger for the Pima Indians Diabetes classification project.
+This is the append-only development ledger for the Pima Indians Diabetes classification project. All configurations, execution steps, and decisions will be documented chronologically.
+
+## Project Setup & Usage Instructions
+
+### Dataset
+**Source**: [Pima Indians Diabetes Database](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)  
+Download `diabetes.csv` from the link above and place it in the root directory of this project before running the scripts.
+
+### Requirements
+This project requires Python 3.10+ and the following libraries:
+```bash
+pip install pandas numpy scikit-learn tensorflow streamlit
+```
+
+### Execution Order
+Navigate to the root directory and execute the scripts in the following order:
+
+1. **Data Preprocessing**:
+   ```bash
+   python src/preprocess.py
+   ```
+   *(Processes `diabetes.csv` and saves arrays to `data/processed/` and the scaler to `models/`)*
+
+2. **Model Architecture**:
+   ```bash
+   python src/model_architecture.py
+   ```
+   *(Defines the ANN structure and saves `model_architecture.json` to `models/`)*
+
+3. **Training & Evaluation**:
+   ```bash
+   python src/train_evaluate.py
+   ```
+   *(Trains the model on CPU, evaluates it, and saves the trained weights `trained_diabetes_model.keras` and history to `models/`)*
+
+4. **Streamlit Deployment**:
+   ```bash
+   streamlit run app.py
+   ```
+   *(Launches the interactive web application)*
+
+---
 
 ## Phase 1: Setup & Planning
 
